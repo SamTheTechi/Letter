@@ -4,8 +4,8 @@ import { pageInfo } from "./data";
 import "./css/font.css";
 import "./css/global.css";
 import "./css/pageone.css";
-import mp3Song from "./assets/Hawayein.mp3";
-import mpSwap from "./assets/Swap.mp3";
+import mp3Song from "../public/Hawayein.mp3";
+import mpSwap from "../public/Swap.mp3";
 const PageSec = () => {
   const slideVal = window.innerWidth / 3;
   const state = {
