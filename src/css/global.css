@@ -1,0 +1,18 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+.Page2HeroBackGround {
+  transition: all 500ms linear;
+  padding-top: 5%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30% center;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
