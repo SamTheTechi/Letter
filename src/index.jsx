@@ -27,7 +27,7 @@ const PageSec = () => {
   const swapMusicRef = useRef(new Audio(mp3Song));
 
   useEffect(() => {
-    swapMusicRef.current.volume = 0.015;
+    swapMusicRef.current.volume = 0.025;
     swapMusicRef.current.play();
   }, [currentPage]);
 
