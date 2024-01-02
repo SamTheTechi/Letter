@@ -31,7 +31,7 @@ const Page = ({
           <p
             className="TextStyle"
             style={{
-              fontSize: "1.7em",
+              fontSize: "2.3em",
               letterSpacing: "1.2px",
             }}
           >
