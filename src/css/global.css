@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 .Page2HeroBackGround {
+  background-color: rgb(180, 180, 180);
   transition: all 500ms linear;
   padding-top: 5%;
   background-repeat: no-repeat;
