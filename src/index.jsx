@@ -110,8 +110,7 @@ const PageSec = () => {
         className="Page2HeroBackGround"
         style={{
           backgroundImage: `url(./src/assets/${
-            pageInfo.everyone.find((img) => currentPage === img.key)
-              ?.backGround || ""
+            pageInfo.everyone.find((img) => currentPage === img.key)?.backGround
           })`,
         }}
       >
