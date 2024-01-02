@@ -19,7 +19,7 @@
   opacity: 1;
   transform-origin: 50% 120%;
   transition: all 100ms linear;
-  box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
 }
 .PageContainerBack1 {
   animation: twist2 2.5s ease-out 0.5s alternate 1 both;
