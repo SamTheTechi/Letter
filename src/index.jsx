@@ -4,8 +4,8 @@ import { pageInfo } from "./data";
 import "./css/font.css";
 import "./css/global.css";
 import "./css/pageone.css";
-import mp3Song from "hawayein.mp3";
-import mp3Swap from "swap.mp3";
+import mp3Song from "/hawayein.mp3";
+import mp3Swap from "/swap.mp3";
 // import mp3Song from "hawayein.mp3";
 // import mp3Swap from "swap.mp3";
 
