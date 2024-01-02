@@ -4,8 +4,11 @@ import { pageInfo } from "./data";
 import "./css/font.css";
 import "./css/global.css";
 import "./css/pageone.css";
-import mp3Song from "../public/Hawayein.mp3";
-import mpSwap from "../public/Swap.mp3";
+import mp3Song from "/hawayein.mp3";
+import mp3Swap from "/swap.mp3";
+// import mp3Song from "hawayein.mp3";
+// import mp3Swap from "swap.mp3";
+
 const PageSec = () => {
   const slideVal = window.innerWidth / 3;
   const state = {
@@ -22,7 +25,7 @@ const PageSec = () => {
   const [typeOccurred, setTypeOccurred] = useState(true);
   const refCount = useRef(0);
   const paras = pageInfo.everyone[currentPage - 1].para;
-  const swapAudioRef = useRef(new Audio(mpSwap));
+  const swapAudioRef = useRef(new Audio(mp3Swap));
   const swapMusicRef = useRef(new Audio(mp3Song));
 
   useEffect(() => {

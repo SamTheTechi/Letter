@@ -71,14 +71,14 @@ export const pageInfo = {
     {
       key: 9,
       type: 3,
-      para: `Lemme tell ya, if you ever need welp, just call🤙🏼 this dude, ! this offer is only valid once !`,
+      para: `Lemme tell ya, if you ever need welp, just call🤙🏼 this dude, {this offer is only valid once}`,
       image: "",
       backGround: "background-dawn.jpg",
     },
     {
       key: 10,
       type: 3,
-      para: `And stop crying ki ye year bhi bekaar hoga, it just started duhh cheer up ! & i'll make new playlist so ✨up?`,
+      para: `And stop crying ki ye year bhi bekaar hoga, it just started duhh cheer up ! & i'll make new spotify playlist so ✨up?`,
       image: "",
       backGround: "background-night.jpg",
     },
@@ -99,14 +99,14 @@ export const pageInfo = {
     {
       key: 13,
       type: 3,
-      para: `Letter ka idea 1 months se mind mai tha bass newyear ka wait kr raha tha, pata nahi kya likh raha mai 😶‍🌫️`,
+      para: `Letter ka idea 1 months se mind mai tha bass new year ka wait kr raha tha, pata nahi kya likh raha mai 😶‍🌫️`,
       image: "",
       backGround: "background-night.jpg",
     },
     {
       key: 14,
       type: 1,
-      para: `💖 n 3ʞ!7 ! 💖 my biologaly inverted clone 💐`,
+      para: `🤥 n 3ʞ!7 ! 🤡`,
       image: "",
       backGround: "background-night.jpg",
     },
