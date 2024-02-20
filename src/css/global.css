@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 .Page2HeroBackGround {
-  background-image: url(../assets/background-night.jpg);
   transition: all 500ms linear;
   padding-top: 5%;
   background-repeat: no-repeat;

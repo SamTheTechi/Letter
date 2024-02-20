@@ -108,11 +108,11 @@ const PageSec = () => {
     <>
       <div
         className="Page2HeroBackGround"
-        // style={{
-        //   backgroundImage: `url(./src/assets/${
-        //     pageInfo.everyone.find((img) => currentPage === img.key)?.backGround
-        //   })`,
-        // }}
+        style={{
+          backgroundImage: `url(${
+            pageInfo.everyone.find((img) => currentPage === img.key)?.backGround
+          })`,
+        }}
       >
         <span className="PageContainer PageContainerBack1"></span>
         <span className="PageContainer PageContainerBack2"></span>

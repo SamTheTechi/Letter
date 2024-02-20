@@ -1,21 +1,9 @@
-export const data = [
-  {
-    intro: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-     an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-    title: `For You Honey`,
-  },
-  {
-    landing: { title: "Hello There!", emoji: "👋🏼" },
-  },
-];
-
 export const pageInfo = {
   everyone: [
     {
       key: 1,
       type: 1,
-      para: `Hello there !👋🏼 or should i say KYA KAR RAHI HO?`,
+      para: `Hello there !👋🏼 `,
       image: "",
       backGround: "background-morning.jpg",
     },
@@ -118,9 +106,4 @@ export const pageInfo = {
       backGround: "background-night.jpg",
     },
   ],
-  friends: {
-    pageOne: {},
-    pageTwo: {},
-    pageThree: {},
-  },
 };
