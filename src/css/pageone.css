@@ -4,14 +4,8 @@
   min-width: 85%;
   max-height: 80%;
   aspect-ratio: 1/2.1;
-  border: solid 10px;
-  border-image: linear-gradient(
-    to top,
-    rgba(250, 0, 250, 0.6),
-    rgba(255, 240, 0, 0.7),
-    rgba(10, 160, 190, 0.6)
-  );
-  border-image-slice: 1;
+  border: solid 5px rgb(100, 25, 25);
+  border-radius: 10px;
   background-image: url(/backpage.jpg);
   background-repeat: no-repeat;
   background-size: cover;
