@@ -3,8 +3,8 @@ import Page from '../assets/page';
 import { pageInfo } from '../assets/data';
 import '../css/font.css';
 import '../css/global.css';
-import '../css/pageone.css';
-import mp3Song from '/hawayein.mp3';
+import '../css/letter.css';
+import mp3Song from '/background.mp3';
 import mp3Swap from '/swap.mp3';
 
 const Letter = () => {

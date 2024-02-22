@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/font.css';
 
 const Page = ({ Typeeff, TouchMove, TouchStart, State, Anime, para, imgUrl, type }) => {
-  var img = `./src/assets/${imgUrl}`;
+  let img = `./src/assets/${imgUrl}`;
   if (type === 1) {
     return (
       <>
