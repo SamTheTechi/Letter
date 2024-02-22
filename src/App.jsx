@@ -1,10 +1,15 @@
-import React, { useEffect } from "react";
-import PageSec from "./index";
+import React, { useEffect } from 'react';
+import Landing from './pages/landing';
+import Letter from './pages/letter';
+import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
-    <section style={{ background: "fixed", overflow: "hidden" }}>
-      <PageSec />
+    <section style={{ background: 'fixed', overflow: 'hidden' }}>
+      <Routes>
+        <Route path={'/'} element={<Landing />}></Route>
+        <Route path={'/Slides'} element={<Letter />}></Route>
+      </Routes>
     </section>
   );
 };

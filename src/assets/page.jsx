@@ -1,16 +1,7 @@
-import React from "react";
-import "./css/font.css";
+import React from 'react';
+import '../css/font.css';
 
-const Page = ({
-  Typeeff,
-  TouchMove,
-  TouchStart,
-  State,
-  Anime,
-  para,
-  imgUrl,
-  type,
-}) => {
+const Page = ({ Typeeff, TouchMove, TouchStart, State, Anime, para, imgUrl, type }) => {
   var img = `./src/assets/${imgUrl}`;
   if (type === 1) {
     return (
@@ -20,21 +11,19 @@ const Page = ({
           onTouchStart={TouchStart}
           className={`PageContainer ${
             Anime === State.next
-              ? "PageNextAnimation"
+              ? 'PageNextAnimation'
               : Anime === State.prev
-              ? "PagePrevAnimation"
-              : ""
+              ? 'PagePrevAnimation'
+              : ''
           } ${Typeeff && `PageContainerMain`}
             }
-              }`}
-        >
+              }`}>
           <p
-            className="TextStyle"
+            className='TextStyle'
             style={{
-              fontSize: "2.5em",
-              letterSpacing: "1.2px",
-            }}
-          >
+              fontSize: '2.5em',
+              letterSpacing: '1.2px',
+            }}>
             {para}
           </p>
         </article>
@@ -48,17 +37,16 @@ const Page = ({
           onTouchStart={TouchStart}
           className={`PageContainer ${
             Anime === State.next
-              ? "PageNextAnimation"
+              ? 'PageNextAnimation'
               : Anime === State.prev
-              ? "PagePrevAnimation"
-              : ""
+              ? 'PagePrevAnimation'
+              : ''
           } ${Typeeff && `PageContainerMain`}
             }
-              }`}
-        >
-          <p className="TextStyle">{para}</p>
-          <div className="imgStyle">
-            <img className="pageImage" src={img} alt="#" />
+              }`}>
+          <p className='TextStyle'>{para}</p>
+          <div className='imgStyle'>
+            <img className='pageImage' src={img} alt='#' />
           </div>
         </article>
       </>
@@ -71,15 +59,14 @@ const Page = ({
           onTouchStart={TouchStart}
           className={`PageContainer ${
             Anime === State.next
-              ? "PageNextAnimation"
+              ? 'PageNextAnimation'
               : Anime === State.prev
-              ? "PagePrevAnimation"
-              : ""
+              ? 'PagePrevAnimation'
+              : ''
           } ${Typeeff && `PageContainerMain`}
             }
-              }`}
-        >
-          <p className="TextStyle">{para}</p>
+              }`}>
+          <p className='TextStyle'>{para}</p>
         </article>
       </>
     );
