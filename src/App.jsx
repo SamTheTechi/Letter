@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
   return (
-    <section style={{ background: 'fixed', overflow: 'hidden' }}>
+    <section style={{ touchAction: `none`, overflow: 'hidden' }}>
       <Routes>
         <Route path='/' element={<Landing />}></Route>
         <Route path='/Slides' element={<Letter />}></Route>
