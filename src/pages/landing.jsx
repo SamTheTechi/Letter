@@ -8,7 +8,7 @@ const Landing = () => {
   const handleClick = () => {
     setAnimation(true);
     setTimeout(() => {
-      navigate(`/Letter/Slides`);
+      navigate(`/Slides`);
       setAnimation(false);
     }, 1700);
   };
