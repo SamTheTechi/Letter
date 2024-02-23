@@ -9,22 +9,22 @@
   color: black;
   text-shadow: 2px 2px pink;
   overflow: hidden;
-  min-width: 80%;
-  max-height: 40%;
+  min-width: 90%;
+  max-height: 35%;
   aspect-ratio: 1/2;
   border: solid 4px rgb(100, 25, 25);
   border-radius: 8px;
   background-image: url(/backpage.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 86%;
+  background-position: 0% 100%;
   margin-bottom: 4rem;
   transform-origin: 50% 120%;
   transition: all 100ms linear;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
 }
 .LandingAnimation {
-  animation: slide 1500ms linear 300ms forwards;
+  animation: slide 1500ms linear 200ms forwards;
 }
 .LandingCenter {
   height: 100vh;

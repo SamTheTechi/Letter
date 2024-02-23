@@ -22,20 +22,21 @@ const Letter = () => {
   const [string, setString] = useState('');
   const [typeOccurred, setTypeOccurred] = useState(true);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [backgroundImageURL, setBackgroundImageURL] = useState(null);
   const refCount = useRef(0);
   const paras = pageInfo.everyone[currentPage - 1].para;
-  const backgroundImageURL = pageInfo.everyone.find((img) => currentPage === img.key)?.backGround;
   const swapAudioRef = useRef(new Audio(mp3Swap));
   const swapMusicRef = useRef(new Audio(mp3Song));
 
   useEffect(() => {
-    swapMusicRef.current.volume = 0.04;
+    swapMusicRef.current.volume = 0.06;
     swapMusicRef.current.play();
   }, [currentPage]);
 
   useEffect(() => {
     swapAudioRef.current.volume = 1;
     swapAudioRef.current.play();
+    setBackgroundImageURL(pageInfo.everyone.find((img) => currentPage === img.key)?.backGround);
   }, [currentPage]);
 
   useEffect(() => {
@@ -89,9 +90,9 @@ const Letter = () => {
     if (backgroundImageURL) {
       const img = new Image();
       img.src = backgroundImageURL;
-      img.onload = () => {
-        setImageLoaded(true);
-      };
+      setImageLoaded(true);
+    } else {
+      setImageLoaded(false);
     }
   }, [backgroundImageURL]);
 
