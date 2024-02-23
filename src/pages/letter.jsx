@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import Page from '../assets/page';
 import { pageInfo } from '../assets/data';
 import '../css/font.css';
@@ -21,25 +21,52 @@ const Letter = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [string, setString] = useState('');
   const [typeOccurred, setTypeOccurred] = useState(true);
-  const [imageLoaded, setImageLoaded] = useState(false);
   const [backgroundImageURL, setBackgroundImageURL] = useState(null);
   const refCount = useRef(0);
   const paras = pageInfo.everyone[currentPage - 1].para;
   const swapAudioRef = useRef(new Audio(mp3Swap));
   const swapMusicRef = useRef(new Audio(mp3Song));
+  const val = pageInfo.everyone.map((img) => img.backGround);
+  const backgroundImages = val.filter((img, index) => val.indexOf(img) === index);
 
-  useEffect(() => {
-    swapMusicRef.current.volume = 0.06;
+  const AudioTracks = useMemo(() => () => {
+    swapMusicRef.current.volume = 0.25;
     swapMusicRef.current.play();
-  }, [currentPage]);
-
-  useEffect(() => {
     swapAudioRef.current.volume = 1;
     swapAudioRef.current.play();
     setBackgroundImageURL(pageInfo.everyone.find((img) => currentPage === img.key)?.backGround);
+  });
+
+  const touchStart = (e) => {
+    const touch = e.touches[0];
+    setTouches([{ x: touch.clientX }]);
+    setChange(false);
+  };
+
+  const touchMove = (e) => {
+    const touch = e.touches[0];
+    const newTouches = [...touches, { x: touch.clientX }];
+    setTouches(newTouches);
+
+    const totalDistance = newTouches.reduce((acc, curr, index) => {
+      if (index > 0) {
+        const deltaX = curr.x - newTouches[index - 1].x;
+        return acc + Math.floor(deltaX);
+      }
+      return acc;
+    }, 0);
+    setDistance(totalDistance);
+  };
+
+  useEffect(() => {
+    AudioTracks();
   }, [currentPage]);
 
   useEffect(() => {
+    backgroundImages.map((image) => {
+      const img = new Image();
+      img.src = image;
+    });
     setTimeout(() => {
       setTypeOccurred(false);
     }, 2500);
@@ -86,43 +113,12 @@ const Letter = () => {
     }
   }, [distance]);
 
-  useEffect(() => {
-    if (backgroundImageURL) {
-      const img = new Image();
-      img.src = backgroundImageURL;
-      setImageLoaded(true);
-    } else {
-      setImageLoaded(false);
-    }
-  }, [backgroundImageURL]);
-
-  const touchStart = (e) => {
-    const touch = e.touches[0];
-    setTouches([{ x: touch.clientX }]);
-    setChange(false);
-  };
-
-  const touchMove = (e) => {
-    const touch = e.touches[0];
-    const newTouches = [...touches, { x: touch.clientX }];
-    setTouches(newTouches);
-
-    const totalDistance = newTouches.reduce((acc, curr, index) => {
-      if (index > 0) {
-        const deltaX = curr.x - newTouches[index - 1].x;
-        return acc + Math.floor(deltaX);
-      }
-      return acc;
-    }, 0);
-    setDistance(totalDistance);
-  };
-
   return (
     <>
       <div
         className='Page2HeroBackGround'
         style={{
-          backgroundImage: imageLoaded ? `url(${backgroundImageURL})` : `none`,
+          backgroundImage: `url(${backgroundImageURL})`,
         }}>
         <span className='PageContainer PageContainerBack1'></span>
         <span className='PageContainer PageContainerBack2'></span>
