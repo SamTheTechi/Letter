@@ -21,8 +21,10 @@ const Letter = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [string, setString] = useState('');
   const [typeOccurred, setTypeOccurred] = useState(true);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const refCount = useRef(0);
   const paras = pageInfo.everyone[currentPage - 1].para;
+  const backgroundImageURL = pageInfo.everyone.find((img) => currentPage === img.key)?.backGround;
   const swapAudioRef = useRef(new Audio(mp3Swap));
   const swapMusicRef = useRef(new Audio(mp3Song));
 
@@ -83,6 +85,16 @@ const Letter = () => {
     }
   }, [distance]);
 
+  useEffect(() => {
+    if (backgroundImageURL) {
+      const img = new Image();
+      img.src = backgroundImageURL;
+      img.onload = () => {
+        setImageLoaded(true);
+      };
+    }
+  }, [backgroundImageURL]);
+
   const touchStart = (e) => {
     const touch = e.touches[0];
     setTouches([{ x: touch.clientX }]);
@@ -109,9 +121,7 @@ const Letter = () => {
       <div
         className='Page2HeroBackGround'
         style={{
-          backgroundImage: `url(${
-            pageInfo.everyone.find((img) => currentPage === img.key)?.backGround
-          })`,
+          backgroundImage: imageLoaded ? `url(${backgroundImageURL})` : `none`,
         }}>
         <span className='PageContainer PageContainerBack1'></span>
         <span className='PageContainer PageContainerBack2'></span>

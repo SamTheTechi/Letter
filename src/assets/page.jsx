@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/font.css';
 
 const Page = ({ Typeeff, TouchMove, TouchStart, State, Anime, para, imgUrl, type }) => {
-  let img = `./src/assets/${imgUrl}`;
+  let img = `/${imgUrl}`;
   if (type === 1) {
     return (
       <>
@@ -21,7 +21,7 @@ const Page = ({ Typeeff, TouchMove, TouchStart, State, Anime, para, imgUrl, type
           <p
             className='TextStyle'
             style={{
-              fontSize: '2.5em',
+              fontSize: '2.8em',
               letterSpacing: '1.2px',
             }}>
             {para}
@@ -44,10 +44,10 @@ const Page = ({ Typeeff, TouchMove, TouchStart, State, Anime, para, imgUrl, type
           } ${Typeeff && `PageContainerMain`}
             }
               }`}>
-          <p className='TextStyle'>{para}</p>
           <div className='imgStyle'>
             <img className='pageImage' src={img} alt='#' />
           </div>
+          <p className='TextStyle'>{para}</p>
         </article>
       </>
     );

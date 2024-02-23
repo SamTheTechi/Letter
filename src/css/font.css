@@ -1,6 +1,6 @@
 .TextStyle {
   color: rgb(30, 30, 30);
-  font-family: "Caveat", Arial, Helvetica, sans-serif;
+  font-family: 'Caveat', Arial, Helvetica, sans-serif;
   font-size: 2em;
   padding: 20px 30px 5px 5px;
   display: flex;
@@ -8,9 +8,11 @@
   flex-direction: column;
 }
 .pageImage {
-  opacity: 0.5;
+  filter: blur(4px);
+  opacity: 0.3;
   max-height: 30%;
   width: 100%;
+  padding: 10%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 30% center;
@@ -18,7 +20,7 @@
 }
 .imgStyle {
   position: absolute;
-  bottom: 20%;
+  bottom: 35%;
   transform: rotate(-10deg);
 }
 @media (min-width: 500px) {
