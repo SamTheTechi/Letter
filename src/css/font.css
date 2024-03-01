@@ -1,21 +1,21 @@
 .TextStyle {
   color: rgb(30, 30, 30);
   font-family: 'Caveat', Arial, Helvetica, sans-serif;
-  font-size: 2em;
+  font-size: 2.1em;
   padding: 20px 30px 5px 5px;
   display: flex;
   min-height: fit-content;
   flex-direction: column;
 }
 .pageImage {
-  filter: blur(4px);
-  opacity: 0.3;
+  filter: blur(1px);
+  opacity: 0.5;
   max-height: 30%;
   width: 100%;
   padding: 10%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 30% center;
+  /* background-position: 30% center; */
   overflow: hidden;
 }
 .imgStyle {
