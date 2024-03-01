@@ -3,7 +3,7 @@ export const pageInfo = {
     {
       key: 1,
       type: 1,
-      para: `Hello there !👋🏼, Swap either right ➡ or left ⬅  to turn pages`,
+      para: `Hello there !👋🏼, Swap either left or right to slide pages`,
       image: '',
       backGround: 'background-morning.jpg',
     },
