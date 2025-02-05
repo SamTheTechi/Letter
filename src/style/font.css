@@ -1,12 +1,14 @@
 .TextStyle {
   color: rgb(30, 30, 30);
-  font-family: 'Caveat', Arial, Helvetica, sans-serif;
+  font-weight: 500;
   font-size: 2.1em;
   padding: 20px 30px 5px 5px;
   display: flex;
   min-height: fit-content;
   flex-direction: column;
+  text-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
 }
+
 .pageImage {
   filter: blur(1px);
   opacity: 0.5;
@@ -15,18 +17,20 @@
   padding: 10%;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-position: 30% center; */
   overflow: hidden;
 }
+
 .imgStyle {
   position: absolute;
   bottom: 35%;
   transform: rotate(-10deg);
 }
+
 @media (min-width: 500px) {
   .pageImage {
     opacity: 0.4;
   }
+
   .imgStyle {
     bottom: 0%;
   }

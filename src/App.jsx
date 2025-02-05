@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Landing from './pages/landing';
 import Letter from './pages/letter';
 import { Route, Routes } from 'react-router-dom';
@@ -8,7 +8,7 @@ const App = () => {
     <section style={{ touchAction: `none`, overflow: 'hidden' }}>
       <Routes>
         <Route path='/' element={<Landing />}></Route>
-        <Route path='/Slides' element={<Letter />}></Route>
+        <Route path='/slides' element={<Letter />}></Route>
       </Routes>
     </section>
   );

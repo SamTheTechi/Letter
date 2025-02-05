@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Page from '../assets/page';
-import { pageInfo } from '../assets/data';
-import '../css/font.css';
-import '../css/global.css';
-import '../css/letter.css';
-import mp3Song from '/background.mp3';
-import mp3Swap from '/swap.mp3';
+import Page from '../util/slides';
+import { pageInfo } from '../util/data';
+import '../style/font.css';
+import '../style/global.css';
+import '../style/letter.css';
+import mp3Song from '../../public/background.mp3';
+import mp3Swap from '../../public/swap.mp3';
 
 const Letter = () => {
   const slideVal = window.innerWidth / 3;
@@ -106,9 +106,8 @@ const Letter = () => {
       <div
         className='Page2HeroBackGround'
         style={{
-          backgroundImage: `url(${
-            pageInfo.everyone.find((img) => currentPage === img.key)?.backGround
-          })`,
+          backgroundImage: `url(${pageInfo.everyone.find((img) => currentPage === img.key)?.backGround
+            })`,
         }}>
         <span className='PageContainer PageContainerBack1'></span>
         <span className='PageContainer PageContainerBack2'></span>

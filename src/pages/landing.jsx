@@ -1,23 +1,27 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../css/landing.css';
+import '../style/landing.css';
+import { orientaion, device } from '../util/util';
 
 const Landing = () => {
   const [orientation, setOrientation] = useState(true);
   const [animation, setAnimation] = useState(false);
+  let polling;
 
   if (orientation) {
-    setInterval(() => {
-      setOrientation(window.matchMedia('(orientation: portrait)').matches);
+    polling = setInterval(() => {
+      setOrientation(!device() || orientaion());
     }, 150);
   }
 
   const navigate = useNavigate();
   const handleClick = () => {
     setAnimation(true);
-    setTimeout(() => {
-      navigate(`/Slides`);
+    const slide = setTimeout(() => {
+      navigate(`/slides`);
       setAnimation(false);
+      clearInterval(polling);
+      clearTimeout(slide)
     }, 1600);
   };
 
